@@ -1,2 +1,5 @@
 Install:
 py -m pip install pymongo fastapi uvicorn
+
+Run:
+py -m uvicorn index:app --reload
