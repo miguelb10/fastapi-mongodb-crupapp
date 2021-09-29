@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from routes.student import student_router
 from fastapi.middleware.cors import CORSMiddleware
 
-#Our react app url
+#Our React app url
 client_apps = ['http://localhost:3000']
 
 #Create app
