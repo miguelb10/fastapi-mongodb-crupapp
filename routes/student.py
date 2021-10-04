@@ -28,7 +28,7 @@ async def create_student(student: Student):
     return listOfStudentEntity(connection.local.student.find())
 
 #update a student
-@student_router.put('/student/{studentId}')
+@student_router.put('/students/{studentId}')
 async def update_student(studentId, student: Student):
     #find the student and then update it with new student data
     connection.local.student.find_one_and_update(
@@ -38,7 +38,7 @@ async def update_student(studentId, student: Student):
     return studentEntity(connection.local.student.find_one({"_id": ObjectId(studentId)}))
 
 #delete a student
-@student_router.delete('/student/{studentId}')
+@student_router.delete('/students/{studentId}')
 async def delete_student(studentId):
     #find the student deletes it and also returns the same student object
     return studentEntity(connection.local.student.find_one_and_delete({"_id": ObjectId(studentId)}))
